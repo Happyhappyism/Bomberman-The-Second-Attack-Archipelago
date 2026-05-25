@@ -1,0 +1,9 @@
+{
+    "minimum_ap_version": "0.6.3", 
+    "world_version": "1.0.0",
+    "authors": ["Happyhappyism", "SavageWizzrobe"],
+    "version": 7,
+    "compatible_version": 7,
+    "game": "Bomberman The Second Attack",
+    "tracker": "https://github.com/Pikachu979/Bomberman-64-The-Second-Attack-Poptracker/releases/tag/V0.0.1"
+}
