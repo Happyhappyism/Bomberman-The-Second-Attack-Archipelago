@@ -121,7 +121,7 @@ class Character(Choice):
     option_red_king = "5fa.bin"
     option_green_king = "5fb.bin"
     option_mini_bomber = "542.bin"
-    option_random = "Random"
+    #option_random = "Random"
     default = "17e.bin"
 
 class GuardianHelmet(Choice):
@@ -144,7 +144,7 @@ class GuardianHelmet(Choice):
     option_bald_head = "423.bin"
     option_rabbit_ears = "427.bin"
     option_none = "None"
-    option_random = "Random"
+    #option_random = "Random"
     default = "3e7.bin"
 
 class GuardianVest(Choice):
@@ -167,7 +167,7 @@ class GuardianVest(Choice):
     option_apron = "424.bin"
     option_duck_suit = "428.bin"
     option_none = "None"
-    option_random = "Random"
+    #option_random = "Random"
     default = "3e8.bin"
 
 class GuardianArm(Choice):
@@ -190,7 +190,7 @@ class GuardianArm(Choice):
     option_hand_puppets = "425.bin"
     option_drill = "429.bin"
     option_none = "None"
-    option_random = "Random"
+    #option_random = "Random"
     default = "3e9.bin"
 
 class GuardianLeg(Choice):
@@ -213,7 +213,7 @@ class GuardianLeg(Choice):
     option_pommy_slippers = "426.bin"
     option_sneakers = "42a.bin"
     option_none = "None"
-    option_random = "Random"
+    #option_random = "Random"
     default = "3ea.bin"
 
 bomberman_tsa_option_groups = [
