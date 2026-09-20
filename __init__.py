@@ -106,10 +106,7 @@ class BombTSAWorld(World):
         self.startbomb = self.options.start_element.value
         if self.startbomb == 7:
             self.startbomb = self.random.randint(0,4)
-        #logger.warning(f"Starting Element Stone choice index: {self.startbomb}")
-        #logger.warning(f"Starting Stones: {valid_startingstones}")
         self.multiworld.push_precollected(self.create_item(valid_startingstones.pop(self.startbomb)))
-        #logger.warning(f"Starting Stones: {valid_startingstones}")
         for element in valid_startingstones:
             item_pool.append(self.create_item(element))
 
@@ -143,7 +140,6 @@ class BombTSAWorld(World):
 
     def create_regions(self) -> None:
         #self.included_stages = self.create_stage_list(self.options.stage_total.value)
-        #logger.warning(f"{shop_location_table}")
         shop_gene_list_raw = list(shop_loc_list.keys())
         self.random.shuffle(shop_gene_list_raw)
         shop_gene_list = {}
@@ -151,7 +147,6 @@ class BombTSAWorld(World):
             
             shop_loc_name = shop_gene_list_raw.pop(0)
             shop_gene_list[shop_loc_name] = shop_loc_list[shop_loc_name]
-        #logger.warning(f"{shop_gene_list}")
         # Create regions.
         for region_name in region_data_table.keys():
             region = Region(region_name, self.player, self.multiworld)
@@ -174,7 +169,6 @@ class BombTSAWorld(World):
                     if location_data.region == region_name and location_data.loc_type == "Shop" # and (region_name in self.included_stages or region_name in fixed_regions)
                     }, BombTSALocation)
                 else:
-                    #logger.warning(f"{shop_gene_list}")
                     region.add_locations({
                     location_name: shop_address for location_name, shop_address in shop_gene_list.items()
                     if location_data_table[location_name].region == region_name
@@ -211,10 +205,7 @@ class BombTSAWorld(World):
             parts = list(shop_gene_list.keys())
             self.random.shuffle(parts)
             for gene in genes:
-                #self.pommy_shop_hint_map[gene] = parts[0]
-                logger.warning(f"{parts}")
                 shop_part = parts.pop(0)
-                logger.warning(f"{shop_part}")
                 self.get_location(shop_part).place_locked_item(self.create_item(gene))
 
 

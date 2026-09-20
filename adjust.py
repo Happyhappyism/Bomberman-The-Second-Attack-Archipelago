@@ -29,7 +29,6 @@ def getRomPath():
     return rompath
 
 def getdatafile(filename, dirpath):
-    #logger.warning(f"moving file to {dirpath}/{filename}")
     file_bytes = pkgutil.get_data(__name__, f"data/{filename}")
     with open(f"{dirpath}/{filename}", "wb") as file:
         file.write(file_bytes)
@@ -318,7 +317,6 @@ def replace_files(charafile,head,body,arm,leg, workdir):
         copy_and_replace(assetbasepath+leg, assetbasepath+guardleg)
 
 def adjust_rom(adjust_data):
-    #logger.warning(f"adjust_data:{adjust_data}")
     adjust_list = []
     adjust_flags = adjust_data[0]
     if adjust_flags & 0x1 == 0:
@@ -326,7 +324,6 @@ def adjust_rom(adjust_data):
             for adj_offset in range(0x10, ((0x8 * 0x5) + 0x10), 0x8):
                 ascii_values = ''.join(chr(b) for b in adjust_data[adj_offset:adj_offset+0x8] if 32 <= b < 128)
                 adjust_list.append(ascii_values)
-            #logger.warning(f"adjust_list:{adjust_list}")
 
             romFile = getRomPath()
             home_dir = os.path.expanduser("~")
@@ -343,5 +340,4 @@ def adjust_rom(adjust_data):
             logger.warning(f"Rom Adjuster failed {e}")
             return 0
     else: 
-        #logger.warning(f"Returning")
         return 1
