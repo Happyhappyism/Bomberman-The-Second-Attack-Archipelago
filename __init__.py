@@ -248,7 +248,7 @@ class BombTSAWorld(World):
                         state.can_reach_location("Thantos Generator", player),)
                         ) >= self.options.planet_required.value))
             case 1:
-                lambda state: state.has("Warship Key", player, 3)
+                noah_entrance.access_rule = lambda state: state.has("Warship Key", player, 3)
             case 2:
                 noah_entrance.access_rule = lambda state: state.has("Noah Coordinates", player)
 
