@@ -131,7 +131,7 @@ class BombTSAWorld(World):
             
         if self.options.include_warkeys or self.options.noah_open == 1:
             for x in range(3):
-                item_pool.append(self.create_item("Warship key"))
+                item_pool.append(self.create_item("Warship Key"))
 
         junk = len(self.multiworld.get_unfilled_locations(self.player)) - len(item_pool)
         item_pool += [self.create_item(self.get_filler_item_name()) for _ in range(junk)]

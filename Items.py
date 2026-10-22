@@ -357,7 +357,7 @@ item_data_table: Dict[str, BombTSAItemData] = {
         type=ItemClassification.progression,
   		item_type= "Event",
 		),
-    "Warship key": BombTSAItemData(
+    "Warship Key": BombTSAItemData(
         code=0x1C30050,
         type=ItemClassification.progression,
         num_exist= 0,
